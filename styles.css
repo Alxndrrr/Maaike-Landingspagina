@@ -115,10 +115,12 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(330px, 1.08fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
   gap: clamp(28px, 5vw, 80px);
   align-items: center;
-  min-height: calc(100vh - 78px);
+  min-height: calc(88vh - 78px);
+  padding-top: clamp(32px, 4vw, 48px);
+  padding-bottom: clamp(32px, 4vw, 48px);
   background:
     radial-gradient(circle at 0 32%, rgba(165, 179, 163, 0.22), transparent 28%),
     linear-gradient(90deg, var(--paper) 0%, var(--paper) 58%, var(--sage-soft) 58%, var(--sage-soft) 100%);
@@ -145,9 +147,9 @@ h1 {
   max-width: 780px;
   margin-bottom: 24px;
   font-family: var(--serif);
-  font-size: clamp(3.5rem, 9vw, 8.8rem);
+  font-size: clamp(3.3rem, 7vw, 6.2rem);
   font-weight: 500;
-  line-height: 0.87;
+  line-height: 0.9;
 }
 
 h1 span {
@@ -159,7 +161,7 @@ h1 em {
   display: block;
   color: var(--forest);
   font-family: var(--script);
-  font-size: clamp(2.4rem, 6.6vw, 6rem);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
   font-style: normal;
   font-weight: 400;
   line-height: 0.95;
@@ -217,7 +219,7 @@ h1 em {
 
 .hero__visual {
   position: relative;
-  width: min(100%, 650px);
+  width: min(100%, 560px);
   justify-self: center;
 }
 
@@ -229,7 +231,7 @@ h1 em {
 }
 
 .visual-card--large {
-  aspect-ratio: 0.82;
+  height: clamp(360px, 52vh, 460px);
 }
 
 .visual-card img {
@@ -692,12 +694,18 @@ h1 em {
 
   .hero {
     min-height: auto;
+    padding-top: 34px;
+    padding-bottom: 48px;
     background:
       linear-gradient(180deg, var(--paper) 0%, var(--paper) 56%, var(--sage-soft) 56%, var(--sage-soft) 100%);
   }
 
   .hero__visual {
-    width: min(100%, 540px);
+    width: min(100%, 460px);
+  }
+
+  .visual-card--large {
+    height: clamp(220px, 32vh, 300px);
   }
 
   .intro-strip,
@@ -760,14 +768,15 @@ h1 em {
 
   .hero {
     padding-top: 36px;
+    padding-bottom: 60px;
   }
 
   h1 {
-    font-size: clamp(3.2rem, 16vw, 5.2rem);
+    font-size: clamp(3rem, 14vw, 4.4rem);
   }
 
   h1 em {
-    font-size: clamp(2.3rem, 12vw, 4rem);
+    font-size: clamp(2.15rem, 10vw, 3.35rem);
   }
 
   .hero__actions,
